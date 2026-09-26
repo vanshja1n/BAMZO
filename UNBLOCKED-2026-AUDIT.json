@@ -1,0 +1,21 @@
+{
+  "html": 464,
+  "games": 450,
+  "old_domain_refs": 0,
+  "old_brand_refs": 0,
+  "placeholder": 0,
+  "raw_arrays": 0,
+  "old_boilerplate_1": 0,
+  "old_boilerplate_2": 0,
+  "unique_titles": 450,
+  "unique_descriptions": 450,
+  "long_titles": 0,
+  "missing_seo": 0,
+  "wrong_canonical": 0,
+  "missing_play": 0,
+  "duplicate_h2": 0,
+  "games_json": 450,
+  "json_placeholder": 0,
+  "robots_ok": true,
+  "sitemap_old_domain": 0
+}

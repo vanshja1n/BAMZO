@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="50%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#E64A19"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF0EB"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#801C00" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="64" height="64" rx="17" fill="url(#bg)"/>
+  <!-- Glass Rim Highlight -->
+  <rect x="1.25" y="1.25" width="61.5" height="61.5" rx="15.75" fill="none" stroke="url(#highlight)" stroke-width="1.5"/>
+  <!-- Premium B Monogram -->
+  <g filter="url(#shadow)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 14C16.8954 14 16 14.8954 16 16V48C16 49.1046 16.8954 50 18 50H33.5C40.4036 50 46 44.4036 46 37.5C46 33.7226 44.3188 30.338 41.6702 28.0645C43.1258 26.2415 44 23.9463 44 21.5C44 17.3579 40.6421 14 36.5 14H18ZM23.5 20.5H34C35.933 20.5 37.5 22.067 37.5 24C37.5 25.933 35.933 27.5 34 27.5H23.5V20.5ZM23.5 34H35C37.4853 34 39.5 36.0147 39.5 38.5C39.5 40.9853 37.4853 43 35 43H23.5V34Z" fill="url(#bGrad)"/>
+  </g>
+</svg>
