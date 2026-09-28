@@ -2,15 +2,25 @@
 
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC746VY5QL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-QC746VY5QL');
+</script>
 <meta charset="utf-8"/>
 <meta name="google-site-verification" content="Y96-jGrVkDpRSeqjvPpMkkXMQucFLWn4hIB9D7MxWw4" />
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>BAMZO — Play 450+ Free Browser Games</title>
 <meta content="Play BAMZO and explore 450+ browser games across action, strategy, driving, puzzle, sports and casual categories." name="description"/>
-<link href="https://unblocked-2026.github.io/" rel="canonical"/>
+<link href="https://bamzo.vercel.app/" rel="canonical"/>
 <meta content="BAMZO — 450 Free Online Games" property="og:title"/>
 <meta content="Explore BAMZO with 450+ browser titles, useful game guides, categories, favorites and recently played games." property="og:description"/>
-<meta content="https://unblocked-2026.github.io/" property="og:url"/>
+<meta content="https://bamzo.vercel.app/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="#080b14" name="theme-color"/>
 <link href="assets/logo.svg" rel="icon" type="image/svg+xml"/>
@@ -20,16 +30,20 @@
 <body>
 <header class="site-header">
 <a class="brand" href="/"><img alt="BAMZO" src="assets/logo.svg"/><span>BAMZO</span></a>
-<nav aria-label="Main navigation" class="main-nav"><a aria-current="page" class="active" href="/">Home</a><a href="/#games">Games</a><a href="popular-games.html">Popular</a><a href="top-unblocked-games.html">Top Games</a><a href="new-games.html">New</a><a href="favorite-games.html">Favorites</a><div class="nav-dropdown"><button type="button">Categories ▾</button><div class="dropdown-menu"><a href="action-games.html">Action &amp; Adventure</a><a href="strategy-games.html">Strategy &amp; Puzzle</a><a href="casual-games.html">Casual &amp; Idle</a><a href="driving-games.html">Driving &amp; Sports</a></div></div><div class="nav-dropdown"><button type="button">Information ▾</button><div class="dropdown-menu"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="dmca.html">DMCA</a></div></div></nav>
-</header>
+<input type="checkbox" id="navToggle" class="nav-toggle" aria-label="Toggle navigation menu"><label for="navToggle" class="nav-toggle-label" aria-label="Open menu"><span></span></label><label for="navToggle" class="nav-backdrop" aria-hidden="true"></label><nav aria-label="Main navigation" class="main-nav"><a aria-current="page" class="active" href="/">Home</a><a href="/#games">Games</a><a href="popular-games.html">Popular</a><a href="top-unblocked-games.html">Top Games</a><a href="new-games.html">New</a><a href="favorite-games.html">Favorites</a><div class="nav-dropdown"><button type="button">Categories ▾</button><div class="dropdown-menu"><a href="action-games.html">Action &amp; Adventure</a><a href="strategy-games.html">Strategy &amp; Puzzle</a><a href="casual-games.html">Casual &amp; Idle</a><a href="driving-games.html">Driving &amp; Sports</a></div></div><div class="nav-dropdown"><button type="button">Information ▾</button><div class="dropdown-menu"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="dmca.html">DMCA</a></div></div><a class="nav-random" href="#" onclick="event.preventDefault();var b=location.pathname.indexOf('/games/')>=0?'..':'.';fetch(b+'/data/games.json').then(function(r){return r.json()}).then(function(d){if(d.games&&d.games.length){var g=d.games[Math.floor(Math.random()*d.games.length)];location.href=b+'/games/'+encodeURIComponent(g.slug)+'.html';}});return false;">★ Surprise Me</a></nav></header>
 <main>
 <section class="hero">
-<span class="eyebrow">450+ FREE BROWSER GAMES</span>
-<h1>Play. Discover.<br><span>Repeat.</span></h1>
-<p>Play hundreds of premium browser games instantly without any downloads. Find your next favorite game on BAMZO.</p>
-<div class="search-row">
-<label class="search"><span>⌕</span><input autocomplete="off" id="search" placeholder="Search 450 games…" type="search"/></label>
-<button class="primary" id="random">Surprise me</button>
+<div class="hero-grid">
+<div class="hero-copy">
+<div class="eyebrow"><span class="live-dot"></span> BAMZO • INSTANT BROWSER PLAY</div>
+<h1>Play 450+ Free Games<br><span>Right in Your Browser</span></h1>
+<p>No downloads, no installations. Jump straight into action, strategy, driving, sports and puzzle games with instant browser play.</p>
+<div class="hero-actions">
+<a class="hero-cta primary" href="#games">Browse Games <span class="cta-arrow">↓</span></a>
+<a class="hero-secondary-link" href="popular-games.html">Popular Titles <span>→</span></a>
+</div>
+</div>
+
 </div>
 </section>
 <section class="saved-section home-showcase" id="popular"><div class="section-head"><div><h2>Popular Games</h2></div><a class="section-link" href="popular-games.html">View popular games →</a></div><div class="game-grid" id="popularGrid"></div></section><section class="home-ai-between"><section aria-labelledby="aiFinderTitle" class="ai-finder">
@@ -60,8 +74,12 @@
 <section class="catalog" id="games">
 <div class="section-head"><div><h2>All games</h2></div><span class="result-count" id="resultCount"></span></div>
 <div class="controls">
+<label class="search compact-search"><span>⌕</span><input autocomplete="off" id="search" placeholder="Search games…" type="search"/></label>
 <div aria-label="Game categories" class="chips" id="categories"></div>
+<div class="controls-right">
 <select aria-label="Sort games" id="sort"><option value="name">A–Z</option><option value="popular">Most popular</option><option value="newest">Newest</option></select>
+<button class="compact-random" id="random" title="Surprise me">★</button>
+</div>
 </div>
 <div aria-live="polite" class="game-grid" id="gameGrid"></div>
 <div class="empty" hidden="" id="empty"><strong>No games found</strong><span>Try another name or category.</span></div>
