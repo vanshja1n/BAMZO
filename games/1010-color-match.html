@@ -27,6 +27,7 @@
 <link href="../assets/logo.svg" rel="icon" type="image/svg+xml"/>
 <link href="../assets/style.css" rel="stylesheet"/>
 <link href="../assets/nav.css" rel="stylesheet"/>
+<script src="../assets/game-player.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"1010 Color Match","url":"https://bamzo.vercel.app/games/1010-color-match.html","description":"Play 1010 Color Match Unblocked online in your browser. Learn the controls, read gameplay tips, view game details and discover popular browser games.","genre":"Puzzle Games","gamePlatform":"Web browser","applicationCategory":"Game","author":{"@type":"Organization","name":"Potato Jam"},"datePublished":"2023-05-07"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bamzo.vercel.app/"},{"@type":"ListItem","position":2,"name":"Strategy & Puzzle","item":"https://bamzo.vercel.app/strategy-games.html"},{"@type":"ListItem","position":3,"name":"1010 Color Match","item":"https://bamzo.vercel.app/games/1010-color-match.html"}]}</script>
 </head>
@@ -62,7 +63,7 @@ document.getElementById('favoriteButton').onclick=()=>{let a=getFavs(),gid=Strin
 const startGame=()=>{if(!frame.src)frame.src=frame.dataset.src;frame.style.display='block';start.style.display='none';let r=JSON.parse(localStorage.getItem('nova-recents')||'[]').map(String).filter(x=>x!==String(GAME.id));localStorage.setItem('nova-recents',JSON.stringify([String(GAME.id),...r].slice(0,20)))};
 document.getElementById('playButton').onclick=()=>startGame();
 document.getElementById('newTabButton').onclick=()=>openBlankGame(GAME.link,GAME.name);
-document.getElementById('fullscreenButton').onclick=(e)=>{var f=document.fullscreenElement||document.webkitFullscreenElement,p=document.getElementById('player');if(f){(document.exitFullscreen||document.webkitExitFullscreen||function(){}).call(document);return;}if(!frame.src)startGame();try{(p.requestFullscreen||p.webkitRequestFullscreen||function(){}).call(p);}catch(err){console.warn('Fullscreen failed:',err);}};
+document.getElementById('fullscreenButton').onclick=(e)=>{if(window.BAMZO_Player){BAMZO_Player.toggleFullscreen(GAME);}};
 function card(x){return `<article class="game-card"><a href="${encodeURIComponent(x.slug)}.html"><div class="cover-wrap"><img class="cover" src="${esc(x.localThumb?'../'+x.localThumb:x.link+x.thumb)}" alt="${esc(x.name)}" width="320" height="320" loading="lazy" decoding="async" fetchpriority="low" onerror="this.src='../assets/logo.svg'"></div><div class="card-text"><strong>${esc(x.name)}</strong><span>${esc(x.genre||x.category)}</span></div></a></article>`}
 fetch(ALL_GAMES_URL).then(r=>r.json()).then(d=>{document.getElementById('relatedGrid').innerHTML=d.games.filter(x=>x.id!==GAME.id).sort((a,b)=>popularity(b.popularity)-popularity(a.popularity)).slice(0,24).map(card).join('')}).catch(()=>{});
 </script>

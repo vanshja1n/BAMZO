@@ -317,8 +317,53 @@
   .hero-copy { max-width: 100%; text-align: left; }
   .hero-copy h1 { font-size: clamp(26px, 7vw, 36px); margin-bottom: 12px; }
   .hero-copy > p { font-size: 14px; margin-bottom: 18px; }
-  .hero-actions { gap: 10px; margin-bottom: 18px; }
-  .hero-btn-primary, .hero-btn-secondary { height: 46px; font-size: 12.5px; padding: 0 18px; flex: 1; min-width: 140px; }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .hero-btn-primary, .hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(88%, 320px);
+    height: 46px;
+    min-height: 46px;
+    padding: 0 16px;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    border-radius: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    flex: none;
+  }
+  .hero-btn-primary {
+    background: #FF5E2B;
+    color: #FFFFFF !important;
+    border: 0;
+    box-shadow: 0 4px 14px rgba(255, 94, 43, 0.3);
+  }
+  .hero-btn-primary:active {
+    transform: scale(0.98);
+    background: #f04e1c;
+  }
+  .hero-btn-secondary {
+    background: #FFFFFF;
+    color: #FF5E2B !important;
+    border: 1px solid rgba(255, 94, 43, 0.45);
+    box-shadow: none;
+    font-weight: 700;
+  }
+  .hero-btn-secondary:active {
+    transform: scale(0.98);
+    background: #FFF5F1;
+  }
   .hero-badges { gap: 8px; }
   .badge-item { padding: 5px 11px; font-size: 10px; }
 
@@ -335,8 +380,8 @@
   .hero { padding: 16px 0 8px !important; }
   .hero-copy h1 { font-size: 26px; }
   .hero-copy > p { font-size: 13px; margin-bottom: 14px; }
-  .hero-actions { flex-direction: column; width: 100%; gap: 8px; }
-  .hero-btn-primary, .hero-btn-secondary { width: 100%; justify-content: center; }
+  .hero-actions { flex-direction: column; width: 100%; gap: 10px; align-items: center; }
+  .hero-btn-primary, .hero-btn-secondary { width: min(88%, 310px); height: 46px; min-height: 46px; justify-content: center; }
   .hero-badges { gap: 6px; justify-content: flex-start; }
   .badge-item { padding: 4px 9px; font-size: 9.5px; }
   .hero-visual { height: 160px; }
@@ -350,6 +395,7 @@
 @media (max-width: 375px) {
   .hero-copy h1 { font-size: 24px; }
   .hero-copy > p { font-size: 12.5px; }
+  .hero-btn-primary, .hero-btn-secondary { width: min(90%, 290px); height: 45px; min-height: 45px; font-size: 12px; }
   .hero-visual { height: 145px; }
   .card-minecraft { width: 85px; height: 120px; left: 60px; }
   .card-subway { width: 90px; height: 65px; }
@@ -361,6 +407,7 @@
 @media (max-width: 320px) {
   .hero-copy h1 { font-size: 22px; }
   .hero-copy > p { font-size: 12px; }
+  .hero-btn-primary, .hero-btn-secondary { width: min(92%, 270px); height: 44px; min-height: 44px; font-size: 11.5px; padding: 0 10px; }
   .badge-item { font-size: 9px; padding: 3px 7px; }
 }
 
