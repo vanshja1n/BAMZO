@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -15,10 +14,10 @@
 <meta charset="utf-8"/>
 <meta name="google-site-verification" content="Y96-jGrVkDpRSeqjvPpMkkXMQucFLWn4hIB9D7MxWw4" />
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>BAMZO — Play 450+ Free Browser Games</title>
+<title>BAMZO — Play Free Online Games</title>
 <meta content="Play BAMZO and explore 450+ browser games across action, strategy, driving, puzzle, sports and casual categories." name="description"/>
 <link href="https://bamzo.vercel.app/" rel="canonical"/>
-<meta content="BAMZO — 450 Free Online Games" property="og:title"/>
+<meta content="BAMZO —  Free Online Games" property="og:title"/>
 <meta content="Explore BAMZO with 450+ browser titles, useful game guides, categories, favorites and recently played games." property="og:description"/>
 <meta content="https://bamzo.vercel.app/" property="og:url"/>
 <meta content="website" property="og:type"/>
@@ -35,15 +34,21 @@
 <section class="hero">
 <div class="hero-grid">
 <div class="hero-copy">
-<div class="eyebrow"><span class="live-dot"></span> BAMZO • INSTANT BROWSER PLAY</div>
-<h1>Play 450+ Free Games<br><span>Right in Your Browser</span></h1>
+<h1>PLAY <span class="highlight-orange">FREE</span> GAMES<br>RIGHT IN YOUR BROWSER</h1>
 <p>No downloads, no installations. Jump straight into action, strategy, driving, sports and puzzle games with instant browser play.</p>
 <div class="hero-actions">
-<a class="hero-cta primary" href="#games">Browse Games <span class="cta-arrow">↓</span></a>
-<a class="hero-secondary-link" href="popular-games.html">Popular Titles <span>→</span></a>
+<a class="hero-btn-primary" href="#popular">EXPLORE TOP GAMES</a>
+<a class="hero-btn-secondary" href="#" onclick="event.preventDefault();var b=location.pathname.indexOf('/games/')>=0?'..':'.';fetch(b+'/data/games.json').then(function(r){return r.json()}).then(function(d){if(d.games&&d.games.length){var g=d.games[Math.floor(Math.random()*d.games.length)];location.href=b+'/games/'+encodeURIComponent(g.slug)+'.html';}});return false;">VIEW RANDOM GAME 🎲</a>
+</div>
+<div class="hero-badges">
+<div class="badge-item"><span class="badge-icon">🚀</span> <span>INSTANT LOAD</span></div>
+<div class="badge-item"><span class="badge-icon">💯</span> <span>100% FREE</span></div>
+<div class="badge-item"><span class="badge-icon">🧩</span> <span>ALL GENRES</span></div>
 </div>
 </div>
-
+<div class="hero-visual" style="display: flex; align-items: center; justify-content: center;">
+  <img src="assets/hero.png" alt="BAMZO Featured Games" style="max-width: 100%; height: auto; object-fit: contain;" loading="eager" decoding="async"/>
+</div>
 </div>
 </section>
 <section class="saved-section home-showcase" id="popular"><div class="section-head"><div><h2>Popular Games</h2></div><a class="section-link" href="popular-games.html">View popular games →</a></div><div class="game-grid" id="popularGrid"></div></section><section class="home-ai-between"><section aria-labelledby="aiFinderTitle" class="ai-finder">
@@ -78,7 +83,6 @@
 <div aria-label="Game categories" class="chips" id="categories"></div>
 <div class="controls-right">
 <select aria-label="Sort games" id="sort"><option value="name">A–Z</option><option value="popular">Most popular</option><option value="newest">Newest</option></select>
-<button class="compact-random" id="random" title="Surprise me">★</button>
 </div>
 </div>
 <div aria-live="polite" class="game-grid" id="gameGrid"></div>
@@ -87,7 +91,7 @@
 </section>
 <section class="saved-section home-showcase" hidden="" id="favorites"><div class="section-head"><div><span class="kicker">Your list</span><h2>Favorite Games</h2></div><a class="section-link" href="favorite-games.html">View favorites →</a></div><div class="game-grid" id="favoriteGrid"></div></section>
 <section class="saved-section" hidden="" id="recent"><div class="section-head"><div><span class="kicker">Jump back in</span><h2>Recently Played</h2></div></div><div class="game-grid compact" id="recentGrid"></div></section>
-<section class="about" id="about"><span class="kicker">About the site</span><h2>BAMZO and 450 browser games</h2><p>BAMZO is a lightweight, responsive catalog created for instant browser play. Explore action, adventure, strategy, puzzle, casual, driving and sports games without installing an app. The static HTML structure is optimized for GitHub Pages and works across desktop, tablet and mobile devices.</p></section>
+<section class="about" id="about"><span class="kicker">About the site</span><h2>BAMZO and browser games</h2><p>BAMZO is a lightweight, responsive catalog created for instant browser play. Explore action, adventure, strategy, puzzle, casual, driving and sports games without installing an app. The static HTML structure is optimized for GitHub Pages and works across desktop, tablet and mobile devices.</p></section>
 <section class="home-seo" aria-labelledby="home-seo-title">
 <span class="kicker">Browser game guide</span><h2 id="home-seo-title">Play BAMZO and Discover 450+ Browser Games</h2>
 <p>BAMZO is built as a fast game catalog for players who want to open a browser game, find the controls and start playing without searching through unrelated pages. The library includes more than 450 titles across action, strategy, puzzle, casual, driving and sports categories. You can search by name, sort the catalog, save favorites and return to recently played games from the same interface.</p>
