@@ -1105,18 +1105,18 @@
     },
     {
       "id": 148,
-      "name": "Minecraft Classic",
+      "name": "GTA Vice City Online",
       "category": "action",
       "popularity": "500M+",
-      "releaseDate": "May 17, 2009",
-      "link": "https://icons-6.us/action-games/minecraft-classic/",
-      "genre": "Adventure Games",
+      "releaseDate": "October 27, 2002",
+      "link": "",
+      "genre": "Action Games",
       "build": "HTML5, JavaScript",
-      "dev": "Mojang Studios",
-      "about": "Minecraft Classic has a compact catalog profile: Mojang Studios is the credited developer, Adventure is the listed genre, HTML5, JavaScript is the build type, and May 17, 2009 is the release value.",
+      "dev": "Rockstar Games",
+      "about": "GTA Vice City Online has a compact catalog profile: Rockstar Games is the credited developer, Action is the listed genre, HTML5, JavaScript is the build type, and October 27, 2002 is the release value.",
       "controls": [],
-      "thumb": "pack.png",
-      "slug": "minecraft-classic"
+      "thumb": "https://upload.wikimedia.org/wikipedia/en/c/ce/Vice-city-cover.jpg",
+      "slug": "gta-vice-city-online"
     },
     {
       "id": 149,
