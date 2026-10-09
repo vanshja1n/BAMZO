@@ -490,8 +490,4 @@ footer .footer-seo-copy{
   overflow: hidden;
 }
 
-@media (max-width: 500px) {
-  .game-ad-banner {
-    display: none;
-  }
-}
+
