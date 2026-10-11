@@ -43,7 +43,7 @@
     if ('orientation' in screen && typeof screen.orientation.lock === 'function') {
       var targetOrientation = getGameOrientation(game);
       screen.orientation.lock(targetOrientation).catch(function(err) {
-        console.warn('Screen orientation lock failed or rejected:', err);
+        // Silently handled to avoid unhandled rejections when security constraints block locking
       });
     }
   }
@@ -103,24 +103,22 @@
     }
 
     var reqFn = player.requestFullscreen ||
-                  player.webkitRequestFullscreen ||
-                  player.webkitRequestFullScreen ||
-                  player.mozRequestFullScreen ||
-                  player.msRequestFullscreen;
+                player.webkitRequestFullscreen ||
+                player.webkitRequestFullScreen ||
+                player.mozRequestFullScreen ||
+                player.msRequestFullscreen;
 
     if (reqFn) {
       try {
         var p = reqFn.call(player);
         if (p && typeof p.then === 'function') {
           p.then(onEntered).catch(function(err) {
-            console.warn('Native requestFullscreen rejected, using fallback CSS fullscreen:', err);
             onEntered();
           });
         } else {
           onEntered();
         }
       } catch (err) {
-        console.warn('Native requestFullscreen threw error, using fallback CSS fullscreen:', err);
         onEntered();
       }
     } else {
